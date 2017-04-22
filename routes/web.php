@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/winelist', 'WineController@index');
+
