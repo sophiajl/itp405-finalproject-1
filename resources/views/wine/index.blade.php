@@ -1,28 +1,3 @@
-<?php
-
-
-//// 2. Generate & Submit SQL
-//$sql_grapes = "SELECT * FROM grapes";
-//$sql_wine_types = "SELECT * FROM wine_types";
-//$sql_countries = "SELECT * FROM countries";
-//
-//$results_grapes = mysqli_query($conn, $sql_grapes);
-//if (!$results_grapes) {
-//    exit("Grapes SQL Error: " . mysqli_error($conn));
-//}
-//
-//$results_wine_types = mysqli_query($conn, $sql_wine_types);
-//if (!$results_wine_types) {
-//    exit("Types SQL Error: " . mysqli_error($conn));
-//}
-//
-//$results_countries = mysqli_query($conn, $sql_countries);
-//if (!$results_countries) {
-//    exit("Types SQL Error: " . mysqli_error($conn));
-//}
-//
-//?>
-
 <html>
 <head>
     <title>Wine Database</title>
@@ -150,7 +125,7 @@
                     <br/>
                 </div> <!--close labels-->
                 <div id="values">
-                    <form method="get" action="wine_results.php">
+                    <form action="/winelist/results" method="post">
                         <input style="width:300px;font-size:15px;font-family:times;" type="text" name="name">
                         <br/>
                         <select style="font-size:15px;font-family:times;width:200px;" name="grape_id">
