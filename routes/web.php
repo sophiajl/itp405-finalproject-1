@@ -19,7 +19,4 @@ Route::get('/', function () {
 
 Route::get('/winelist', 'WineController@index');
 
-<<<<<<< HEAD
 Route::get('/winelist/results', 'WineController@search');
-=======
->>>>>>> c637cd9609ef4dc7cf036786487948b0890a97ac
