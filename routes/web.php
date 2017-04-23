@@ -11,8 +11,12 @@
 |
 */
 
+use App\Wine;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/winelist', 'WineController@index');
+
+Route::get('/winelist/results', 'WineController@search');

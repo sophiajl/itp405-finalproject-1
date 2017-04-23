@@ -1,117 +1,9 @@
-<?php
-
-
-//// 2. Generate & Submit SQL
-//$sql_grapes = "SELECT * FROM grapes";
-//$sql_wine_types = "SELECT * FROM wine_types";
-//$sql_countries = "SELECT * FROM countries";
-//
-//$results_grapes = mysqli_query($conn, $sql_grapes);
-//if (!$results_grapes) {
-//    exit("Grapes SQL Error: " . mysqli_error($conn));
-//}
-//
-//$results_wine_types = mysqli_query($conn, $sql_wine_types);
-//if (!$results_wine_types) {
-//    exit("Types SQL Error: " . mysqli_error($conn));
-//}
-//
-//$results_countries = mysqli_query($conn, $sql_countries);
-//if (!$results_countries) {
-//    exit("Types SQL Error: " . mysqli_error($conn));
-//}
-//
-//?>
 
 <html>
 <head>
     <title>Wine Database</title>
+    {{ HTML::style('css/style.css') }}
 </head>
-
-<style>
-
-    body{
-        font-family: Helvetica;
-    }
-    #name{
-        float:left;
-        font-size:60px;
-        margin-right:40px;
-        font-weight:bolder;
-        color:white;
-        text-decoration:none;
-    }
-    #outercontainer{
-        background-color:#68000D;
-        margin:auto;
-        position:absolute;
-        padding-top:10px;
-        height:1200px;
-
-    }
-
-    .navlink {
-        float:left;
-        display: block;
-        width: 200px;
-        height: 40px;
-        margin-top: 25px;
-        color:white;
-        font-size: 30px;
-        text-align: center;
-        text-decoration: none;
-
-    }
-
-    .navlink:hover {
-        color:#F4DBD8;
-        text-decoration:underline;
-    }
-    #body{
-        margin:auto;
-        padding-top:20px;
-        padding-bottom:20px;
-        padding-left:150px;
-        padding-right:150px;
-    }
-
-    #form{
-        background-color:white;
-        color:black;
-        text-align:left;
-        margin-bottom:30px;
-        margin-left:20%;
-        padding-top:20px;
-        padding-left:40px;
-        font-size:20px;
-        width:60%;
-        height:400px;
-        position:relative;
-        line-height:2;
-    }
-    #labels{
-        float:left;
-        margin-right:30px;
-    }
-    #values{
-
-    }
-
-    .button{
-        margin-top:10px;
-        width:100px;
-        font-size:15px;
-        color: #68000D;
-        background: white;
-        font-weight: bold;
-        border: 1px solid #68000D;
-    }
-
-    .button:hover {
-        color: white;
-        background: #68000D;
-    }
-</style>
 
 
 <body style="background-color:#FFFACC">
@@ -150,7 +42,7 @@
                     <br/>
                 </div> <!--close labels-->
                 <div id="values">
-                    <form method="get" action="wine_results.php">
+                    <form action="/winelist/results" method="post">
                         <input style="width:300px;font-size:15px;font-family:times;" type="text" name="name">
                         <br/>
                         <select style="font-size:15px;font-family:times;width:200px;" name="grape_id">
